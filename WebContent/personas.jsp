@@ -7,15 +7,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<title>Insert title here</title>
+<title> Bienvenido/a a ABM </title>
 </head>
 <body>
-
+    <h1> ALTAS </h1>
+    
 	<s:form action="save">
 	<s:textfield label="Nombre" name="name"></s:textfield>
 	<s:textfield label="Edad" name="age"></s:textfield>
 	<s:radio label="Genero" name="gender" list="#{'Femenino':'Femenino','Masculino':'Masculino'}" />
-	<s:submit></s:submit>
+	<s:submit value="Guardar"></s:submit>
 	<s:actionerror/>
 	</s:form>
 	
@@ -35,6 +36,26 @@
 		</tr>
 	</s:iterator>
 	</table>
+	
+	<h1> BAJAS </h1>
+	
+	<s:form action="delete">
+	<s:textfield label="ID" name="id"></s:textfield>
+	<s:submit value="Borrar"></s:submit>
+	<s:actionerror/>
+	</s:form>
+	
+	
+	<h1> MODIFICACIONES </h1>
+	
+	<s:form action="modify">
+	<s:textfield label="ID" name="id"></s:textfield>
+	<s:textfield label="Nombre" name="name"></s:textfield>
+	<s:textfield label="Edad" name="age"></s:textfield>
+	<s:radio label="Genero" name="gender" list="#{'Femenino':'Femenino','Masculino':'Masculino'}" />
+	<s:submit value="Modificar"></s:submit>
+	<s:actionerror/>
+	</s:form>
 	
 	
 </body>
